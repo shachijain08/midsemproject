@@ -69,7 +69,7 @@
     flex-direction: row;
     justify-content: space-evenly;
   }
-#infoButton, #moveButtom {
+#buttons {
     height: 40px;
     width: 100px;
     background-color: lightgreen;
