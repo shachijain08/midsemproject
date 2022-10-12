@@ -69,13 +69,24 @@
     flex-direction: row;
     justify-content: space-evenly;
   }
-#buttons {
+#infoButton {
     height: 40px;
     width: 100px;
     background-color: lightgreen;
     font-size: 20px;
     font-weight: 1;
     border: 0px;
+}
+#moveButton {
+    height: 40px;
+    width: 100px;
+    background-color: rgb(193, 231, 193);
+    font-size: 20px;
+    font-weight: 1;
+    border: 0px;
+
+}
+#buttons {
     display: flex;
     flex-direction: row;
     align-items: center;
