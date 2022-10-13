@@ -12,3 +12,53 @@ const infoOutput = document.getElementById("infoOutput");
 const info = document.getElementById("info");
 const moveButton = document.getElementById("moves");
 
+function getPokemon() {
+    fetch("https://pokeapi.co/api/v2/pokemon/" + id)
+      .then((resp) => resp.json())
+      .then((resp) => {
+        pokeName.textContent = resp.name;
+        pokeImg.src =
+          resp.sprites["other"]["official-artwork"]["front_default"];
+        characters = [];
+        list.innerHTML = "";
+        moves = [];
+        for (let i = 0; i < resp.moves.length; i++) {
+          moves.push(resp.moves[i]["move"]["name"]);
+        }
+        for (key in resp.types) {
+          characters.push(resp.types[key]["type"]["name"]);
+        }
+        for (let i = 0; i < characters.length; i++) {
+          list.innerHTML +=
+            '<div class="type-box ' +
+            characters[i] +
+            '" class>' +
+            characters[i] +
+            "</div>";
+        }
+        if (flag == true) {
+          info.style.backgroundColor = "lightGreen";
+          moveButton.style.backgroundColor = "white";
+          height = resp.height / 10;
+          weight = resp.weight / 10;
+          hp = resp.stats[0]["base_stat"];
+          attack = resp.stats[1]["base_stat"];
+          defense = resp.stats[2]["base_stat"];
+          specAttack = resp.stats[3]["base_stat"];
+          specDefense = resp.stats[4]["base_stat"];
+          speed = resp.stats[5]["base_stat"];
+          infoOutput.innerHTML =
+            "<div class='info_text'> height: " + height + "m</div><div class='info_text'> weight: " + weight + "kg</div><div class='info_text'>hp: " +hp +
+            "</div><div class='info_text'>attack: " + attack + "</div><div class='info_text'>defense: " + defense +"</div><div class='info_text'>special-attack: " +specAttack +
+            "</div><div class='info_text'>special-defence; " + specDefense +"</div><div class='info_text'>speed: " +speed +"</div>";
+        } else {
+          info.style.backgroundColor = "white";
+          moveButton.style.backgroundColor = "lightGreen";
+          infoOutput.innerHTML = "";
+          for (let j = 0; j < moves.length; j++) {
+            infoOutput.innerHTML += "<div class='info_text'>" + moves[j] + "</div>";
+          }
+        }
+      });
+  }
+  getPokemon();
