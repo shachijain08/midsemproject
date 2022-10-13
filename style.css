@@ -64,8 +64,7 @@ body {
     gap: 5px;
   }
   .button {
-    border: none;
-    border-radius: 5px;
+    border: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,8 +74,7 @@ body {
     font-size: 15px;
   }
   #info {
-    border: none;
-    border-radius: 5px;
+    border: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
