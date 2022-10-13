@@ -96,4 +96,4 @@ function getPokemon() {
           infoOutput.innerHTML += "<div class='info_text'>" + moves[j] + "</div>";
       }
     }
-  });
+  }); 

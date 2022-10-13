@@ -112,9 +112,12 @@ body {
   #infoOutput {
     height: 250px;
     width: 225px;
-    background-color: rgb(255, 255, 255);
+    border-color: #d333d0;
+    background-color: #D3D3D3;
+    outline: 3px solid #d333d0;
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-left: 15px;
     overflow-y: auto;
   }
   #switch {
@@ -155,6 +158,12 @@ body {
     border: 15px;  
     border-radius: 5px;
     background-color: #96D9D6;
+  }
+  .fighting {
+    padding:5px;  
+    border: 15px;  
+    border-radius: 5px;
+    background-color: #C22E28;
   }
   .poison {
     padding:5px;  
@@ -222,3 +231,4 @@ body {
     border-radius: 5px;
     background-color: #D685AD;
   }
+ 
