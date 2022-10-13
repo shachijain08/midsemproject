@@ -29,12 +29,7 @@ function getPokemon() {
           characters.push(resp.types[key]["type"]["name"]);
         }
         for (let i = 0; i < characters.length; i++) {
-          list.innerHTML +=
-            '<div class="type-box ' +
-            characters[i] +
-            '" class>' +
-            characters[i] +
-            "</div>";
+          list.innerHTML += '<div class="type-box ' + characters[i] +'" class>' +characters[i] +"</div>";
         }
         if (flag == true) {
           info.style.backgroundColor = "lightGreen";
@@ -62,3 +57,40 @@ function getPokemon() {
       });
   }
   getPokemon();
+  rightButton.addEventListener("click", () => {
+    id = (id + 1) % 899;
+    if (id == 0) {
+      id = 1;
+    }
+    getPokemon();
+  });
+  leftButton.addEventListener("click", () => {
+    id = (id - 1) % 899;
+    if (id == 0) {
+      id = 898;
+    }
+    getPokemon();
+  });
+  info.addEventListener("click", () => {
+    if (flag == false) {
+      flag = true;
+      info.style.backgroundColor = "lightGreen";
+      moveButton.style.backgroundColor = "white";
+      infoOutput.innerHTML =
+        "<div class='info_text'> height: " + height +"m</div><div class='info_text'> weight: " +weight +"kg</div><div class='info_text'>hp: " +
+        hp + "</div><div class='info_text'>attack: " + attack + "</div><div class='info_text'>defense: " + defense +
+        "</div><div class='info_text'>special-attack: " + specAttack + "</div><div class='info_text'>special-defence; " +
+        specDefense +"</div><div class='info_text'>speed: " + speed +"</div>";
+    }
+  });
+  moveButton.addEventListener("click", () => {
+    if (flag == true) {
+      info.style.backgroundColor = "white";
+      moveButton.style.backgroundColor = "lightGreen";
+      flag = false;
+      infoOutput.innerHTML = "";
+      for (let j = 0; j < moves.length; j++) {
+          infoOutput.innerHTML += "<div class='info_text'>" + moves[j] + "</div>";
+      }
+    }
+  });
