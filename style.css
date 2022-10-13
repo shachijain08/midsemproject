@@ -36,7 +36,7 @@ body {
   }
   #img {
     display: flex;
-    border: black solid 2px;
+    border: rgb(0, 0, 0) solid 2px;
     height: 200px;
     width: 200px;
     justify-content: center;
@@ -45,7 +45,7 @@ body {
     width: 80%;
   }
   #name {
-    border: rgb(0, 0, 0) solid 1px;
+    border: black solid 1px;
     height: 30px;
     width: 200px;
     border-radius: 10px;
@@ -57,30 +57,32 @@ body {
   }
   #text {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 17px;
+    padding: 0px;
   }
   #list {
     display: flex;
-    gap: 9px;
+    gap: 7px;
   }
   .button {
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 37px;
+    height: 35px;
     width: 80px;
-    margin: 7px;
-    font-size: 17px;
+    margin: 5px;
+    font-size: 15px;
   }
   #info {
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 35px;
     width: 80px;
     margin: 5px;
-    font-size: 17px;
+    font-size: 15px;
   }
   #moves {
     display: flex;
@@ -97,7 +99,8 @@ body {
   }
   #infoTitle {
     font-weight: bold;
-    font-size: 23px;
+    font-size: 20px;
+    margin: 0px;
   }
   #infoOutput {
     height: 250px;
