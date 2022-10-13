@@ -1,3 +1,6 @@
+* {
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+}
 html {
     height: 100%;
   }
@@ -17,8 +20,9 @@ body {
   }
   #title {
     align-self: center;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
+    padding-bottom: 25px;
   }
   #heading {
     margin-bottom: 15px;
@@ -65,6 +69,7 @@ body {
   }
   .button {
     border: 5px;
+    border-radius: 7px;
     display: flex;
     justify-content: center;
     align-items: center;
