@@ -1,8 +1,7 @@
 html {
     height: 100%;
   }
-  
-  body {
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,12 +80,15 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 35px;
-    width: 80px;
-    margin: 5px;
-    font-size: 15px;
   }
-  #moves {
+  #move {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  #arrows {
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -107,7 +109,7 @@ html {
   #infoOutput {
     height: 250px;
     width: 225px;
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
     padding-top: 15px;
     padding-bottom: 15px;
     overflow-y: auto;
