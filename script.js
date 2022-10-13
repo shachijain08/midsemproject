@@ -11,6 +11,9 @@ const list = document.getElementById("list");
 const infoOutput = document.getElementById("infoOutput");
 const info = document.getElementById("info");
 const moveButton = document.getElementById("moves");
+var c = document.getElementById("myCanvas");
+
+
 
 function getPokemon() {
     fetch("https://pokeapi.co/api/v2/pokemon/" + id)
